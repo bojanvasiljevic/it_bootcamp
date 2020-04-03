@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PageTest]">
+  <test thread-count="5" name="Create Account Tests(failed)">
+    <classes>
+      <class name="pagetests.AutomaticCreateAccountTest">
+        <methods>
+          <include name="end"/>
+          <include name="createNewAccountAutomatically"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- pagetests.AutomaticCreateAccountTest -->
+      <class name="pagetests.ManualCreateAccountTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="end"/>
+          <include name="createNewAccountManualally"/>
+        </methods>
+      </class> <!-- pagetests.ManualCreateAccountTest -->
+    </classes>
+  </test> <!-- Create Account Tests(failed) -->
+</suite> <!-- Failed suite [PageTest] -->

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="All PageTests">
+
+	<test thread-count="5" verbose="2" name="Home page and Shopping Cart tets">
+		<classes>
+
+			<class name="pagetests.HomePageTest" />
+			<class name="pagetests.CartTest" />
+
+		</classes>
+	</test> <!-- Testing page methods -->
+
+	<test thread-count="5" verbose="2" name="Create Account Tests">
+		<classes>
+
+			<class name="pagetests.ManualCreateAccountTest" />
+			<class name="pagetests.AutomaticCreateAccountTest" />
+
+		</classes>
+	</test> <!-- These tests will fail unless source data are changed, since users are 
+		already created -->
+
+	<test thread-count="5" verbose="2" name="Log in tests">
+		<classes>
+
+			<class name="pagetests.ManualLogInTest" />
+			<class name="pagetests.AutomaticLogInTest" />
+
+		</classes>
+	</test> <!-- Testing log in methods. Make sure that users are first created before 
+		executing Log in tests -->
+
+
+</suite> <!-- All page tests -->
